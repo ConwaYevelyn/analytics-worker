@@ -1,0 +1,18 @@
+{
+  "service": "analytics-worker",
+  "status": "healthy",
+  "timestamp": "2024-10-27T10:00:00Z",
+  "version": "1.2.3",
+  "dependencies": {
+    "database": "online",
+    "message_queue": "connected",
+    "external_api": "reachable"
+  },
+  "metrics": {
+    "cpu_usage": 0.15,
+    "memory_usage": 0.60,
+    "active_threads": 12,
+    "processed_events_per_minute": 1500
+  },
+  "alerts": []
+}
