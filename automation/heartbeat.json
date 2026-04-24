@@ -3,16 +3,43 @@
   "status": "healthy",
   "timestamp": "2024-10-27T10:00:00Z",
   "version": "1.2.3",
+  "git_sha": "a1b2c3d4e5f6",
+  "environment": "production",
+  "region": "us-east-1",
   "dependencies": {
-    "database": "online",
-    "message_queue": "connected",
-    "external_api": "reachable"
+    "database": {
+      "status": "online",
+      "latency_ms": 5
+    },
+    "message_queue": {
+      "status": "connected",
+      "messages_in_queue": 50
+    },
+    "external_api": {
+      "status": "reachable",
+      "response_time_ms": 200
+    }
   },
   "metrics": {
     "cpu_usage": 0.15,
     "memory_usage": 0.60,
     "active_threads": 12,
-    "processed_events_per_minute": 1500
+    "processed_events_per_minute": 1500,
+    "error_rate": 0.001,
+    "average_processing_time_ms": 2
   },
-  "alerts": []
+  "alerts": [
+    {
+      "severity": "warning",
+      "message": "High CPU usage detected",
+      "timestamp": "2024-10-27T09:55:00Z",
+      "metric": "cpu_usage",
+      "value": 0.15,
+      "threshold": 0.8
+    }
+  ],
+  "metadata": {
+    "hostname": "analytics-worker-1",
+    "ip_address": "192.168.1.10"
+  }
 }
